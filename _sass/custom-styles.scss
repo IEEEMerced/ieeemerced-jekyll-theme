@@ -1,0 +1,206 @@
+@media (prefers-color-scheme: light) {
+  a,
+  a:focus,
+  a:hover {
+    color: $text-color-light
+  }  
+}
+
+@media (prefers-color-scheme: dark) {
+  a,
+  a:focus,
+  a:hover {
+    color: $text-color-dark;
+  }  
+}
+
+.btn-secondary,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+.btn-secondary:hover {
+  color: #333;
+  text-shadow: none;
+  background-color: #fff;
+  border: .05rem solid #fff;
+  opacity: 0.9;
+}
+
+.cover-html {
+  height: 100%;  
+}
+
+@media (prefers-color-scheme: light) 
+{
+  body {
+    color: $text-color-light;
+  }
+}
+
+@media (prefers-color-scheme: dark) 
+{
+  body {
+    color: $text-color-dark;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  }
+}
+
+.cover-body {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (prefers-color-scheme: light) {
+  .background-image {
+    background-image: url("../img/sierras.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .background-image {
+    background-image: url("../img/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (prefers-color-scheme: light) 
+{
+  .body-container {
+    background-color: $body-bg-color-light;
+  }
+}
+
+@media (prefers-color-scheme: dark) 
+{
+  .body-container {
+    background-color: $body-bg-color-dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .ieee-kite {
+    content: url("../img/IEEEkiteblack.svg");
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .ieee-kite {
+    content: url("../img/IEEEkitewhite.svg");
+  }
+}
+
+.cover-container {
+  max-width: 50em;
+}
+
+.content-container {
+  max-width: 50em;
+}
+
+.content-container .masthead {
+  padding: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .content-container .masthead {
+    background-color: rgba(255, 255, 255, 0);
+  }  
+  .content {
+    background-color: $content-bg-color-light;
+  }  
+}
+
+@media (prefers-color-scheme: dark) {
+  .content-container .masthead {
+    background-color: rgba(30, 30, 30, 0);
+  }
+  .content {
+    background-color: $content-bg-color-dark;
+  }  
+}
+
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .nav-masthead .nav-link {
+    color: transparentize($text-color-light, 0.5)
+  }
+  .nav-masthead .nav-link:hover,
+  .nav-masthead .nav-link:focus {
+    border-bottom-color: transparentize($text-color-light, 0.25);
+  }
+  .nav-masthead .active {
+    color: $text-color-light;
+    border-bottom-color: $text-color-light;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .nav-masthead .nav-link {
+    color: transparentize($text-color-dark, 0.5)
+  }
+  .nav-masthead .nav-link:hover,
+  .nav-masthead .nav-link:focus {
+    border-bottom-color: transparentize($text-color-dark, 0.25);
+  }
+  .nav-masthead .active {
+    color: $text-color-dark;
+    border-bottom-color: $text-color-dark;
+  }
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: light) {
+  .mastfoot {
+    color: rgba(0, 0, 0, .5);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .mastfoot {
+    color: rgba(255, 255, 255, .5);
+  }
+}

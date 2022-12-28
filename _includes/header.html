@@ -1,0 +1,13 @@
+<header class="masthead mb-auto rounded">
+    <div class="inner">
+        <div class="masthead-brand">
+            <img width="30" height="30" alt="IEEE Kite" class="ieee-kite"/>
+            <span class="ms-2">{{ site.title }}</span>
+        </div>
+        <nav class="nav nav-masthead justify-content-center">
+            {% for item in site.data.navbar.pages %}
+                <a class="nav-link {% if item.url == page.url %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
+        </nav>
+    </div>
+</header>
