@@ -4,6 +4,4 @@
 .sass-cache
 _site
 Gemfile.lock
-/*.html
-/*.markdown
 *.code-workspace

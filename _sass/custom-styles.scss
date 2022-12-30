@@ -67,7 +67,7 @@
 
 @media (prefers-color-scheme: dark) {
   .background-image {
-    background-image: url("../img/cover.jpg");
+    background-image: url("../img/building.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -117,13 +117,13 @@
   }  
 }
 
-
 .masthead {
   margin-bottom: 2rem;
 }
 
 .masthead-brand {
   margin-bottom: 0;
+  font-size: 15pt;
 }
 
 .nav-masthead .nav-link {
@@ -133,43 +133,34 @@
   border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+.nav-masthead .nav-item {
+  margin-right: 5pt;
 }
 
 @media (prefers-color-scheme: light) {
   .nav-masthead .nav-link {
-    color: transparentize($text-color-light, 0.5)
+    color: transparentize($text-color-light, 0.1)
   }
   .nav-masthead .nav-link:hover,
   .nav-masthead .nav-link:focus {
     border-bottom-color: transparentize($text-color-light, 0.25);
   }
-  .nav-masthead .active {
+  .nav-masthead .nav-link.active {
     color: $text-color-light;
     border-bottom-color: $text-color-light;
   }
 }
 @media (prefers-color-scheme: dark) {
   .nav-masthead .nav-link {
-    color: transparentize($text-color-dark, 0.5)
+    color: transparentize($text-color-dark, 0.1)
   }
   .nav-masthead .nav-link:hover,
   .nav-masthead .nav-link:focus {
     border-bottom-color: transparentize($text-color-dark, 0.25);
   }
-  .nav-masthead .active {
+  .nav-masthead .nav-link.active {
     color: $text-color-dark;
     border-bottom-color: $text-color-dark;
-  }
-}
-
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
   }
 }
 
@@ -195,4 +186,22 @@
 
 .pagination {
   justify-content: center;
+}
+
+.navbar-collapse.show {
+  margin-top: 1em;
+}
+.navbar-collapse.collapsing {
+  margin-top: 1em;
+}
+
+.navbar-toggler:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-toggler {
+    filter: invert(100%)
+  }
 }
