@@ -1,7 +1,11 @@
 <head>
-    <title>{{ page.title }}</title>
     <meta charset="utf-8">
-    <link rel="icon" href="/assets/img/IEEEKite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="icon" href="/assets/img/IEEEKite.svg" type="image/svg+xml"/>
     <link rel="stylesheet" href="{{ "/assets/css/bootstrap-theme.css" | relative url }}">
+    {%- feed_meta -%}
     {%- include custom-head.html -%}
 </head>
