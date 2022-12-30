@@ -87,18 +87,6 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .ieee-kite {
-    content: url("../img/IEEEkiteblack.svg");
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .ieee-kite {
-    content: url("../img/IEEEkitewhite.svg");
-  }
-}
-
 .cover-container {
   max-width: 50em;
 }
@@ -203,4 +191,8 @@
   .mastfoot {
     color: rgba(255, 255, 255, .5);
   }
+}
+
+.pagination {
+  justify-content: center;
 }
