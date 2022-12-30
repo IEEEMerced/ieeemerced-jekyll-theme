@@ -1,9 +1,37 @@
 title: IEEE at UC Merced
+tagline: Student Chapter
+author: IEEEMerced
+
+social:
+  name: IEEE Merced
+  links:
+    - https://twitter.com/IEEEMerced
+    - https://github.com/IEEEMerced
+
+description: >
+  We are a student organization created with the aim 
+  to provide engineers with technical, social, and 
+  professional development outside the classroom.
+
+lang: en_US
+
+twitter:
+  card: summary_large_image
+  author: IEEEMerced
+  username: IEEEMerced
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-theme: ieeemerced-jekyll-theme
-show_excerpts: true
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/sierras.jpg
+
+theme: ieeemerced-jekyll-theme
+
+show_excerpts: true
 paginate: 3
 
 plugins:
