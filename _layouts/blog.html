@@ -2,42 +2,51 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
-{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-<p class="author">
-    <span class="date">{{ post.date | date: date_format }}</span>
-    <span class="author">
-        {%- if post.author -%}
-            • {% for author in post.author %}
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-            {% endfor %}
-        {%- endif -%}
-    </span>
-</p>
-<div>
-    {{ post.excerpt }}
-</div>
-{% endfor %}
+{% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
 
-<div>
-<nav aria-label="...">
-    <ul class="pagination">
-        {% if paginator.previous_page %}
-        <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}">{{ paginator.previous_page }}</a></li>
-        {% else %}
-        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
-        {% endif %}
-        <li class="page-item"><a class="page-link active" href="{{ paginator.page_path }}">{{ paginator.page }}</a></li>
-        {% if paginator.next_page %}
-        <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path }}">{{ paginator.next_page }}</a></li>
-        <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path }}">Next</a></li>
-        {% else %}
-        <li class="page-item disabled"><a class="page-link">Next</a></li>
-        {% endif %}
+
+  {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul class="post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+      <li>
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
     </ul>
-</nav>
-</div>
+
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+
+  {%- endif -%}
+
