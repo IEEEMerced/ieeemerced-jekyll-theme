@@ -63,13 +63,26 @@
     background-size: cover;
     background-position:bottom;
   }
+  .background-image-long-page {
+    background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:bottom;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .background-image {
-    background-image: url("../img/building.jpg");
+    background-image: url("../img/sierras.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position:bottom;
+  }
+  .background-image-long-page {
+    background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:bottom;
   }
 }
 
@@ -119,6 +132,7 @@
 
 .masthead {
   margin-bottom: 2rem;
+  user-select: none;
 }
 
 .masthead-brand {
