@@ -1,90 +1,11 @@
-@media (prefers-color-scheme: light) {
-  a,
-  a:focus,
-  a:hover {
-    color: $text-color-light
-  }  
-}
-
-@media (prefers-color-scheme: dark) {
-  a,
-  a:focus,
-  a:hover {
-    color: $text-color-dark;
-  }  
-}
-
-.btn-secondary,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none;
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-.btn-secondary:hover {
-  color: #333;
-  text-shadow: none;
-  background-color: #fff;
-  border: .05rem solid #fff;
-  opacity: 0.9;
-}
-
 .cover-html {
   height: 100%;  
-}
-
-@media (prefers-color-scheme: light) 
-{
-  body {
-    color: $text-color-light;
-  }
-}
-
-@media (prefers-color-scheme: dark) 
-{
-  body {
-    color: $text-color-dark;
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-  }
 }
 
 .cover-body {
   height: 100%;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (prefers-color-scheme: light) {
-  .background-image {
-    background-image: url("../img/sierras.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:bottom;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .background-image {
-    background-image: url("../img/building.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-@media (prefers-color-scheme: light) 
-{
-  .body-container {
-    background-color: $body-bg-color-light;
-  }
-}
-
-@media (prefers-color-scheme: dark) 
-{
-  .body-container {
-    background-color: $body-bg-color-dark;
-  }
 }
 
 .cover-container {
@@ -95,73 +16,28 @@
   max-width: 50em;
 }
 
-.content-container .masthead {
+.content-container header {
   padding: 1rem;
 }
 
-@media (prefers-color-scheme: light) {
-  .content-container .masthead {
-    background-color: rgba(255, 255, 255, 0);
-  }  
-  .content {
-    background-color: $content-bg-color-light;
-  }  
+header {
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .content-container .masthead {
-    background-color: rgba(30, 30, 30, 0);
-  }
-  .content {
-    background-color: $content-bg-color-dark;
-  }  
+.navbar-brand {
+	--bs-navbar-brand-font-size: 15pt;
+  margin: 0;
 }
 
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-  font-size: 15pt;
-}
-
-.nav-masthead .nav-link {
+.nav .nav-link {
   padding: .25rem 0;
   font-weight: 700;
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-item {
+.nav .nav-item {
   margin-right: 5pt;
-}
-
-@media (prefers-color-scheme: light) {
-  .nav-masthead .nav-link {
-    color: transparentize($text-color-light, 0.1)
-  }
-  .nav-masthead .nav-link:hover,
-  .nav-masthead .nav-link:focus {
-    border-bottom-color: transparentize($text-color-light, 0.25);
-  }
-  .nav-masthead .nav-link.active {
-    color: $text-color-light;
-    border-bottom-color: $text-color-light;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .nav-masthead .nav-link {
-    color: transparentize($text-color-dark, 0.1)
-  }
-  .nav-masthead .nav-link:hover,
-  .nav-masthead .nav-link:focus {
-    border-bottom-color: transparentize($text-color-dark, 0.25);
-  }
-  .nav-masthead .nav-link.active {
-    color: $text-color-dark;
-    border-bottom-color: $text-color-dark;
-  }
 }
 
 .cover {
@@ -171,23 +47,9 @@
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
-
-@media (prefers-color-scheme: light) {
-  .mastfoot {
-    color: rgba(0, 0, 0, .5);
-  }
+.navbar {
+	--bs-navbar-toggler-focus-width: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  .mastfoot {
-    color: rgba(255, 255, 255, .5);
-  }
-}
-
-.pagination {
-  justify-content: center;
-}
-
 .navbar-collapse.show {
   margin-top: 1em;
 }
@@ -195,13 +57,109 @@
   margin-top: 1em;
 }
 
-.navbar-toggler:focus {
-  outline: 0;
-  box-shadow: none;
+@media (prefers-color-scheme: light) 
+{
+	:root {
+		--bs-body-color: rgb(0, 0, 0);
+		--bs-link-color: rgb(31, 31, 31);
+		--bs-link-hover-color: rgb(97, 97, 97);
+	}
+	.navbar {
+		--bs-navbar-toggler-border-color: rgba(0,0,0,0.1);
+		--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+	}
+	.navbar-brand{
+		--bs-navbar-brand-color: rgb(0, 0, 0);
+	}
+	.btn {
+		--bs-btn-border-width: 0;
+	}
+	.btn-lg {
+		--bs-btn-color: rgb(0, 0, 0);
+		--bs-btn-hover-color: rgb(0,0,0);
+		--bs-btn-bg: rgba(239, 239, 239, 0.65);
+		--bs-btn-hover-bg: rgba(255, 255, 255, 0.632);
+	}
+  .body-container {
+    background-color: $body-bg-color-light;
+  }
+  .background-image {
+    background-image: url("../img/sierras.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+  }
+  .background-image-long-page {
+    background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:bottom;
+  }
+  .navbar .nav-link {
+    color: transparentize($text-color-light, 0.1)
+  }
+  .nav .nav-link:hover,
+  .nav .nav-link:focus {
+    border-bottom-color: transparentize($text-color-light, 0.25);
+  }
+  .nav .nav-link.active {
+    color: $text-color-light;
+    border-bottom-color: $text-color-light;
+  }
+	.content {
+    background-color: $content-bg-color-light;
+  }  
 }
 
-@media (prefers-color-scheme: dark) {
-  .navbar-toggler {
-    filter: invert(100%)
+@media (prefers-color-scheme: dark) 
+{
+	:root {
+		--bs-body-color: rgba(255,255,255,1);
+		--bs-link-color: rgba(255,255,255,1);
+		--bs-link-hover-color: rgba(255,255,255,1);
+	}
+	.navbar {
+		--bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.736);
+		--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+	}
+	.navbar-brand{
+		--bs-navbar-brand-color: rgba(255,255,255,1);
+	}
+	.btn {
+		--bs-btn-border-width: 0;
+	}
+	.btn-lg {
+		--bs-btn-color: rgb(255, 255, 255);
+		--bs-btn-bg: rgba(114, 114, 114, 0.65);
+		--bs-btn-hover-bg: rgba(156, 156, 156, 0.632);
+	}
+  .body-container {
+    background-color: $body-bg-color-dark;
   }
+  .background-image {
+    background-image: url("../img/sierras.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+  }
+  .background-image-long-page {
+    background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:bottom;
+  }
+  .nav .nav-link {
+    color: transparentize($text-color-dark, 0.1)
+  }
+  .nav .nav-link:hover,
+  .nav .nav-link:focus {
+    border-bottom-color: transparentize($text-color-dark, 0.25);
+  }
+  .nav .nav-link.active {
+    color: $text-color-dark;
+    border-bottom-color: $text-color-dark;
+  }
+	.content {
+    background-color: $content-bg-color-dark;
+  }  
 }

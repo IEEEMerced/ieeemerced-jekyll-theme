@@ -34,10 +34,8 @@ defaults:
 theme: ieeemerced-jekyll-theme
 
 show_excerpts: true
-paginate: 3
 
 plugins:
- - jekyll-paginate
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-sitemap
