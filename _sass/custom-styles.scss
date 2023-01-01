@@ -66,7 +66,9 @@ header {
 	}
 	.navbar {
 		--bs-navbar-toggler-border-color: rgba(0,0,0,0.1);
-		--bs-navbar-toggler-icon-bg: url("/assets/img/toggler-light.svg");
+	}
+	.navbar-toggler-icon {
+		background-image: url("../img/toggler-light.svg")
 	}
 	.navbar-brand{
 		--bs-navbar-brand-color: rgb(0, 0, 0);
@@ -120,7 +122,9 @@ header {
 	}
 	.navbar {
 		--bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.736);
-		--bs-navbar-toggler-icon-bg: url("/assets/img/toggler-dark.svg");
+	}
+	.navbar-toggler-icon {
+		background-image: url("../img/toggler-dark.svg")
 	}
 	.navbar-brand{
 		--bs-navbar-brand-color: rgba(255,255,255,1);
