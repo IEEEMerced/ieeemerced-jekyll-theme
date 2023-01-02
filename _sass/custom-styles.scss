@@ -1,5 +1,32 @@
-.cover-html {
-  height: 100%;  
+.background-image {
+	background-image: url("../img/sierras.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:bottom;
+}
+
+.background-image-long-page {
+	background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position:bottom;
+}
+
+.content-container {
+  max-width: 50em;
+}
+
+.content-container header {
+  padding: 1rem;
+}
+
+.cover {
+  padding: 0 1.5rem;
+
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
 }
 
 .cover-body {
@@ -12,16 +39,16 @@
   max-width: 50em;
 }
 
-.content-container {
-  max-width: 50em;
-}
-
-.content-container header {
-  padding: 1rem;
+.cover-html {
+  height: 100%;  
 }
 
 header {
   user-select: none;
+}
+
+.lead {
+	font-weight: normal;
 }
 
 .navbar-brand {
@@ -40,42 +67,36 @@ header {
   margin-right: 5pt;
 }
 
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
-}
 .navbar {
 	--bs-navbar-toggler-focus-width: none;
 }
+
+.navbar-brand a {
+	color: var(--bs-navbar-brand-color);
+	text-decoration: none;
+}
+
 .navbar-collapse.show {
   margin-top: 1em;
 }
+
 .navbar-collapse.collapsing {
   margin-top: 1em;
 }
 
-.background-image {
-	background-image: url("../img/sierras.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position:bottom;
-}
-.background-image-long-page {
-	background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-position:bottom;
-}
 @media (prefers-color-scheme: light) {
 	.body-container {
     background-color: rgba(255, 255, 255, 0.37);
   }
+	.content {
+		background-color: $white;
+	}
 }
 @media (prefers-color-scheme: dark) {
 	.body-container {
     background-color: rgba(0, 40, 86, 0.5);
   }
+	.content {
+		background-color: $gray-800;
+	}
 }

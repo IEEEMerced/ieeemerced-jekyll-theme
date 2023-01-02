@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% assign person = site.data.people[page.person] %}
+
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+<h1><span itemprop="givenName">{{ person.name.first }}</span> <span itemprop="familyName">{{ person.name.last }}</span></h1>
+
+{%- if person.image -%}
+<div class="mt-3">
+<img itemprop="image" src="{{ person.image }}" style="max-width: 10em;" class="rounded-circle mx-auto" alt="Picture of {{ person.name.first }} {{ person.name.last }}">
+</div>
+{%- else -%}
+<div class="mt-3">
+<img src="/assets/img/defaultprofile.png" style="max-width: 10em;" class="rounded-circle mx-auto" alt="Default Profile Picture">
+</div>
+{%- endif -%}
+
+{%- if person.bio -%}
+<div class="mt-3">
+<h2>About Me</h2>
+<p>{{ person.bio }}</p>
+</div>
+{%- endif -%}
+</div>
