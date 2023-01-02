@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+
+<div class="mb-4">
+	{{ content }}
+</div>
+
+<div itemprop="organization" itemscope itemtype="http://schema.org/Organization">
+	<span class="visually-hidden"itemprop="legalName">{{ site.title }}</span>
+	{%- for group in site.data.officers -%}
+	<h2>{{ group.title }}</h2>
+	<div class="row row-cols-auto justify-content-md-center">
+	{%- for member in group.members -%}
+		{% assign person = site.data.people[member.id] %}
+		<div class="col">
+			<div class="card mt-4" itemprop="member" itemscope itemtype="http://schema.org/Person">
+				{% if person.image %}
+				<img itemprop="image" src="{{ person.image }}" class="card-img-top" alt="Picture of {{ person.name.first }} {{ person.name.last }}">
+				{% else %}
+				<img src="..." class="card-img-top placeholder" alt="Default picture for {{ person.name.first }} {{ person.name.last }}">
+				{% endif %}
+				<div class="card-body">
+					{% if person.profile %}
+					<a href="/profiles/{{ person.profile }}" class="card-link"><h5 class="card-title"><span itemprop="givenName">{{ person.name.first }}</span> <span itemprop="familyName">{{ person.name.last }}</span></h5></a>
+					{% else %}
+					<h5 class="card-title"><span itemprop="givenName">{{ person.name.first }}</span> <span itemprop="familyName">{{ person.name.last }}</span></h5>
+					{% endif %}
+					<h6 class="card-subtitle mb-2 text-muted" itemprop="jobTitle">{{ member.title }}</h6>
+				</div>
+			</div>
+		</div>
+	{%- endfor -%}
+	</div>
+</div>
+{%- endfor -%}

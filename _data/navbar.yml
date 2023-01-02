@@ -1,5 +1,7 @@
-pages:
+toc:
   - title: About
-    url: /
+    subfolderitems:
+    - title: Officers
+      url: /officers/
   - title: News
     url: /news/
