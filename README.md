@@ -1,5 +1,5 @@
 # ieeemerced-jekyll-theme
-[![Build Passing](https://github.com/IEEEMerced/ieeemerced-jekyll-theme/actions/workflows/build.yml/badge.svg?branch=staging)](https://github.com/IEEEMerced/ieeemerced-jekyll-theme/actions/workflows/build.yml)
+[![Build](https://github.com/IEEEMerced/ieeemerced-jekyll-theme/actions/workflows/build.yml/badge.svg)](https://github.com/IEEEMerced/ieeemerced-jekyll-theme/actions/workflows/build.yml)
 
 This is the Jekyll theme used on our website.
 

@@ -30,9 +30,7 @@ defaults:
       path: ""
     values:
       image: /assets/img/sierras.jpg
-
-theme: ieeemerced-jekyll-theme
-
+      
 show_excerpts: true
 
 plugins:
