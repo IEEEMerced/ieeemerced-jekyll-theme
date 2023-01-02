@@ -1,15 +1,16 @@
-$text-color-light: rgb(42, 42, 42);
-$link-color-light: rgb(31, 31, 31);
-$link-color-hover-light: rgb(97, 97, 97);
-$button-bg-color-light:rgba(239, 239, 239, 0.65);
-$button-bg-color-hover-light:rgba(255, 255, 255, 0.632);
-$content-bg-color-light: rgba(255, 255, 255, 0.8);
-$body-bg-color-light: rgba(255, 255, 255, 0.37);
-
-$text-color-dark: rgba(255,255,255,1);
-$link-color-dark: rgb(255, 255, 255);
-$link-color-hover-dark: rgb(255, 255, 255);
-$button-bg-color-dark:rgba(239, 239, 239, 0.65);
-$button-bg-color-hover-dark:rgba(156, 156, 156, 0.632);
-$content-bg-color-dark: rgba(30, 30, 30, 0.9);
-$body-bg-color-dark: rgba(0, 40, 86, 0.5);
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $red,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);

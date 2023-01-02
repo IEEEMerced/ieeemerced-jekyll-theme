@@ -57,115 +57,25 @@ header {
   margin-top: 1em;
 }
 
-@media (prefers-color-scheme: light) 
-{
-	:root {
-		--bs-body-color: rgb(0, 0, 0);
-		--bs-link-color: rgb(31, 31, 31);
-		--bs-link-hover-color: rgb(97, 97, 97);
-	}
-	.navbar {
-		--bs-navbar-toggler-border-color: rgba(0,0,0,0.1);
-	}
-	.navbar-toggler-icon {
-		background-image: url("../img/toggler-light.svg")
-	}
-	.navbar-brand{
-		--bs-navbar-brand-color: rgb(0, 0, 0);
-    --bs-navbar-brand-hover-color: rgb(0,0,0);
-	}
-	.btn {
-		--bs-btn-border-width: 0;
-	}
-	.btn-lg {
-		--bs-btn-color: rgb(0, 0, 0);
-		--bs-btn-hover-color: rgb(0,0,0);
-		--bs-btn-bg: rgba(239, 239, 239, 0.65);
-		--bs-btn-hover-bg: rgba(255, 255, 255, 0.632);
-	}
-  .body-container {
-    background-color: $body-bg-color-light;
-  }
-  .background-image {
-    background-image: url("../img/sierras.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:bottom;
-  }
-  .background-image-long-page {
-    background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position:bottom;
-  }
-  .navbar .nav-link {
-    color: transparentize($text-color-light, 0.1)
-  }
-  .nav .nav-link:hover,
-  .nav .nav-link:focus {
-    border-bottom-color: transparentize($text-color-light, 0.25);
-  }
-  .nav .nav-link.active {
-    color: $text-color-light;
-    border-bottom-color: $text-color-light;
-  }
-	.content {
-    background-color: $content-bg-color-light;
-  }  
+.background-image {
+	background-image: url("../img/sierras.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:bottom;
 }
-
-@media (prefers-color-scheme: dark) 
-{
-	:root {
-		--bs-body-color: rgba(255,255,255,1);
-		--bs-link-color: rgba(255,255,255,1);
-		--bs-link-hover-color: rgba(255,255,255,1);
-	}
-	.navbar {
-		--bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.736);
-	}
-	.navbar-toggler-icon {
-		background-image: url("../img/toggler-dark.svg")
-	}
-	.navbar-brand{
-		--bs-navbar-brand-color: rgba(255,255,255,1);
-    --bs-navbar-brand-hover-color: rgba(255,255,255,1);
-	}
-	.btn {
-		--bs-btn-border-width: 0;
-	}
-	.btn-lg {
-		--bs-btn-color: rgb(255, 255, 255);
-		--bs-btn-bg: rgba(114, 114, 114, 0.65);
-		--bs-btn-hover-bg: rgba(156, 156, 156, 0.632);
-	}
-  .body-container {
-    background-color: $body-bg-color-dark;
+.background-image-long-page {
+	background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position:bottom;
+}
+@media (prefers-color-scheme: light) {
+	.body-container {
+    background-color: rgba(255, 255, 255, 0.37);
   }
-  .background-image {
-    background-image: url("../img/sierras.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:bottom;
+}
+@media (prefers-color-scheme: dark) {
+	.body-container {
+    background-color: rgba(0, 40, 86, 0.5);
   }
-  .background-image-long-page {
-    background: url("../img/sierras-longpage.jpg") rgb(201, 208, 226);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position:bottom;
-  }
-  .nav .nav-link {
-    color: transparentize($text-color-dark, 0.1)
-  }
-  .nav .nav-link:hover,
-  .nav .nav-link:focus {
-    border-bottom-color: transparentize($text-color-dark, 0.25);
-  }
-  .nav .nav-link.active {
-    color: $text-color-dark;
-    border-bottom-color: $text-color-dark;
-  }
-	.content {
-    background-color: $content-bg-color-dark;
-  }  
 }
